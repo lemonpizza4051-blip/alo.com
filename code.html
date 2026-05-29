@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar Sesión | AcmeCorp</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dae2fd",
+                        "surface-bright": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "inverse-primary": "#b4c5ff",
+                        "background": "#f8f9ff",
+                        "on-surface-variant": "#434655",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary-container": "#eeefff",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#0053db",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "secondary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#00174b",
+                        "primary-container": "#2563eb",
+                        "outline": "#737686",
+                        "surface-variant": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-surface": "#213145",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ffede6",
+                        "secondary": "#565e74",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#943700",
+                        "outline-variant": "#c3c6d7",
+                        "tertiary-container": "#bc4800",
+                        "primary": "#004ac6",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-high": "#dce9ff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-container": "#5c647a",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdbcd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .login-card-shadow {
+            box-shadow: 0px 10px 25px -5px rgba(15, 23, 42, 0.05);
+        }
+        .animate-subtle-scale {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-subtle-scale:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full top-0 border-b border-outline-variant bg-surface sticky z-50">
+<nav class="flex justify-between items-center h-16 px-md max-w-container-max mx-auto">
+<div class="flex items-center gap-base">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">AcmeCorp</span>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Features</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">About</a>
+</div>
+<div>
+<button class="bg-primary text-on-primary px-md py-2 rounded-lg font-label-md text-label-md animate-subtle-scale hover:opacity-90 transition-all">
+                    Sign Up
+                </button>
+</div>
+</nav>
+</header>
+<main class="min-h-[calc(100vh-64px-120px)] flex items-center justify-center py-xl px-md relative overflow-hidden">
+<!-- Abstract background elements for Kinetic Logic feel -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+<!-- Login Container -->
+<div class="w-full max-w-[440px] bg-surface-container-lowest border border-outline-variant rounded-xl p-lg login-card-shadow z-10">
+<div class="text-center mb-xl">
+<h1 class="font-headline-md text-headline-md text-on-surface mb-2">Bienvenido de nuevo</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Ingresa tus credenciales para continuar</p>
+</div>
+<form class="space-y-md" id="loginForm">
+<!-- Email Field -->
+<div class="flex flex-col gap-base">
+<label class="font-label-md text-label-md text-secondary" for="email">Correo electrónico</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full pl-10 pr-md py-3 bg-surface rounded-lg border border-outline-variant focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all font-body-md text-body-md" id="email" placeholder="nombre@ejemplo.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-base">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-secondary" for="password">Contraseña</label>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Olvidé mi contraseña</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-surface rounded-lg border border-outline-variant focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all font-body-md text-body-md" id="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface-variant transition-colors p-1" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined" id="passwordIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-base">
+<input class="w-4 h-4 text-primary bg-surface border-outline-variant rounded focus:ring-primary focus:ring-offset-0" id="remember" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-secondary cursor-pointer" for="remember">Recordarme</label>
+</div>
+<!-- Primary Action -->
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md font-bold uppercase tracking-wider animate-subtle-scale hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+                    Iniciar sesión
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="flex items-center gap-md my-xl">
+<div class="flex-grow h-[1px] bg-outline-variant"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">O continuar con</span>
+<div class="flex-grow h-[1px] bg-outline-variant"></div>
+</div>
+<!-- Social Buttons -->
+<div class="grid grid-cols-2 gap-md">
+<button class="flex items-center justify-center gap-base py-2.5 px-md bg-surface border border-outline-variant rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors animate-subtle-scale">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6tSP_-C2U4rg9nQusbeQI0Tc2mNywW0vBPgY3nqWhKLGXJ9GqHBXD6zKD0Ppwlxms25EJABAyfvHl_j_HQ_B-jLl9IrhecavL7refl_sQlEulYkoxtKztgl_vvSyE1Ja8bmCAKs-mhAviWq4BW1_7e9YQfR1eAqP4v9ziVBpeXKs5ltOB4EzmvwtSUxezlsPVpJT3dQyOw5H6cr8g0HwHFuXUW_Spe8HGqBJIIlsrRWBE2SVi1wLDAjmIgeaMp7UNhMfDJRQ9-B-"/>
+                    Google
+                </button>
+<button class="flex items-center justify-center gap-base py-2.5 px-md bg-surface border border-outline-variant rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors animate-subtle-scale">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+                    GitHub
+                </button>
+</div>
+<!-- Footer Link -->
+<p class="mt-xl text-center font-body-sm text-body-sm text-secondary">
+                ¿No tienes una cuenta? 
+                <a class="text-primary font-bold hover:underline" href="#">Regístrate</a>
+</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-md border-t border-outline-variant bg-surface-bright mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-md max-w-container-max mx-auto gap-md">
+<div class="flex items-center gap-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">AcmeCorp</span>
+<span class="font-label-sm text-label-sm text-secondary ml-md">© 2024 AcmeCorp. All rights reserved.</span>
+</div>
+<div class="flex gap-lg">
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-all hover:underline" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-all hover:underline" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-all hover:underline" href="#">Help Center</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-all hover:underline" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const passwordIcon = document.getElementById('passwordIcon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.innerText = 'visibility_off';
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.innerText = 'visibility';
+            }
+        }
+
+        // Form submission micro-interaction
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = `<span class="material-symbols-outlined animate-spin">progress_activity</span> Validando...`;
+            
+            setTimeout(() => {
+                btn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Bienvenido`;
+                btn.classList.replace('bg-primary', 'bg-tertiary-container');
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-tertiary-container', 'bg-primary');
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+</body></html>
